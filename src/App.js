@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState,useEffect } from 'react';
+import Form from './components/Form';
 
 function App() {
+
+  //state app buscador
+  const [search, setSearch] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="jumbotron">
+        <h1 className="lead text-center">Buscador de Imagenes</h1>
+        <Form
+          setSearch={setSearch}  
+        />
+      </div>
     </div>
   );
 }
